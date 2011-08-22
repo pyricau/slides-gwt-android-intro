@@ -13,16 +13,16 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-@def slideTitles #f39400;
+@def slideTitles #b5067c;
 @def slideBackground #FFFFFF;
 @def presentationBackground #91d7f2;
 @def slideContent #000000;
 
 @def slideColor slideBackground;
 @def backgroundColor presentationBackground;
-@def headerColor slideContent;
-@def headerText slideBackground;
-@def slideHeaderColor slideContent;
+@def headerColor #62c6ed;
+@def headerText #FFFFFF;
+@def slideHeaderColor #b5067c;
 @def titleColor slideTitles;
 @def sectionTextColor slideContent;
 
@@ -91,8 +91,9 @@ h2 a, h2 a:visited, h2 a:hover {
 	box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
 	-webkit-box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
 	-moz-box-shadow: rgba(40, 47, 54.1) 0 2px 5px;
-	background: literal("-webkit-gradient(linear, left top, left bottom, from(#C4baa4), to(#e5dbc5) )");
-	background-color: #e5dbc5;
-	background: literal("-moz-linear-gradient(left top, #C4baa4, #e5dbc5)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, from(#62c6ed), to(#91d7f2) )");
+	background-color: #91d7f2;
+	background: literal("-moz-linear-gradient(left top, #62c6ed, #91d7f2)");
 }
+
 
