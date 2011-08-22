@@ -1,0 +1,7 @@
+target
+gwt-android-intro/.classpath
+gwt-android-intro/.project
+gwt-android-intro/.settings/
+gwt-android-intro/src/main/webapp/META-INF/
+gwt-android-intro/src/main/webapp/WEB-INF/deploy/
+gwt-android-intro/src/main/webapp/documentation
