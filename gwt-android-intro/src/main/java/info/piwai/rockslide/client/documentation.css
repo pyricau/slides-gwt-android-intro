@@ -13,10 +13,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-@def slideTitles #8f1e1c;
+@def slideTitles #f39400;
 @def slideBackground #FFFFFF;
-@def presentationBackground #d7cbb5;
-@def slideContent #2a2a2a;
+@def presentationBackground #91d7f2;
+@def slideContent #000000;
 
 @def slideColor slideBackground;
 @def backgroundColor presentationBackground;
@@ -27,7 +27,9 @@
 @def sectionTextColor slideContent;
 
 body {
-	background: backgroundColor;
+	background-color: backgroundColor;
+	background-image: url("documentation/Volutes2_v2.png");
+	background-repeat: no-repeat;
 }
 
 .presentationHeader {
