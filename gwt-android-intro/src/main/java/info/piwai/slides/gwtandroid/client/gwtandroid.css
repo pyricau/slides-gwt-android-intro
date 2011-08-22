@@ -1,0 +1,103 @@
+/**
+ * Copyright (C) 2011 Pierre-Yves Ricau (py.ricau at gmail.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed To in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+@def slideTitles #b5067c;
+@def slideBackground #FFFFFF;
+@def presentationBackground #91d7f2;
+@def slideContent #000000;
+
+@def slideColor slideBackground;
+@def backgroundColor presentationBackground;
+@def headerColor #62c6ed;
+@def headerText #FFFFFF;
+@def slideHeaderColor #b5067c;
+@def titleColor slideTitles;
+@def sectionTextColor slideContent;
+
+body {
+	background-color: backgroundColor;
+	background-image: url("documentation/Volutes2_v2.png");
+	background-repeat: no-repeat;
+}
+
+.presentationHeader {
+	color: slideHeaderColor;
+}
+
+.presentationHeader a,.presentationHeader a:visited,.presentationHeader a:hover {
+	border-bottom: 2px solid slideHeaderColor;
+}
+
+div.slide {
+	background-color: slideColor;
+	border: 1px solid headerColor;
+	box-shadow: 5px 5px 10px headerColor;
+}
+
+.em {
+	color: #b5067c; 
+}
+
+@sprite h1 {
+	gwt-image: "headerLogo";
+	width: auto;
+	background-color: headerColor;
+	color: headerText;
+}
+
+h2 {
+	color: titleColor;
+}
+
+h3 {
+	color: titleColor;
+}
+
+div.section {
+	color: sectionTextColor;
+}
+
+a,a:visited,a:hover {
+	border-bottom: 2px solid sectionTextColor;
+}
+
+h2 a, h2 a:visited, h2 a:hover {
+	border-bottom: 2px solid titleColor;
+}
+
+
+.tag {
+	font-family: 'Arial';
+	color: sectionTextColor;
+	display: inline-block;
+	padding: 6px 10px 3px 10px;
+	font-size: 25px;
+	line-height: 30px;
+	text-shadow: none;
+	letter-spacing: 0;
+	bottom: 10px;
+	position: relative;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	background: slideColor;
+	box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
+	-webkit-box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
+	-moz-box-shadow: rgba(40, 47, 54.1) 0 2px 5px;
+	background: literal("-webkit-gradient(linear, left top, left bottom, from(#62c6ed), to(#91d7f2) )");
+	background-color: #91d7f2;
+	background: literal("-moz-linear-gradient(left top, #62c6ed, #91d7f2)");
+}
+
+

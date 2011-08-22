@@ -100,7 +100,7 @@
           <execution>
             <configuration>
               <modules>
-                <module>info.piwai.rockslide.Documentation</module>
+                <module>info.piwai.slides.gwtandroid.client.GWTAndroid</module>
               </modules>
             </configuration>
             <goals>

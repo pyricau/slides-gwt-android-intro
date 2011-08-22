@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='documentation'>
+
+    <inherits name="com.google.gwt.user.theme.standard.Standard" /> 
+
+    <inherits name='info.piwai.rockslide.Rockslide'/>
+    
+    <!-- Syntax Highlighting -->
+    <inherits name='info.piwai.rockslide.sh.java.JavaSH'/>
+    <inherits name='info.piwai.rockslide.sh.xml.XmlSH'/>
+    <stylesheet src="styles/shThemeEclipse.css"/>
+    
+	<!-- Injects ga.js -->
+<!--     <inherits name='info.piwai.rockslide.ga.SlideAnalytics'/> -->
+    
+    <source path='client' />
+    
+    <entry-point class='info.piwai.slides.gwtandroid.client.GWTAndroid' />
+
+</module>
