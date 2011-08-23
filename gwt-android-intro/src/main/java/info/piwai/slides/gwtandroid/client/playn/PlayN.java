@@ -15,38 +15,21 @@
  */
 package info.piwai.slides.gwtandroid.client.playn;
 
-import info.piwai.rockslide.client.shownotes.ElementSlideNotes;
-import info.piwai.rockslide.client.shownotes.WidgetSlideNotes;
 import info.piwai.rockslide.client.slides.Chapter;
+import info.piwai.rockslide.client.ui.Slides;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.uibinder.client.UiTemplate;
-import com.google.gwt.user.client.ui.Widget;
 
 public class PlayN extends Chapter {
 
-    @UiTemplate("Title.ui.xml")
-    interface Title extends UiBinder<Element, ElementSlideNotes> {
-        Title binder = GWT.create(Title.class);
-    }
-    
-    @UiTemplate("EmptyCode.ui.xml")
-    interface EmptyCode extends UiBinder<Widget, WidgetSlideNotes> {
-        EmptyCode binder = GWT.create(EmptyCode.class);
-    }
-    
-    @UiTemplate("EmptySlide.ui.xml")
-    interface EmptySlide extends UiBinder<Element, ElementSlideNotes> {
-        EmptySlide binder = GWT.create(EmptySlide.class);
+    interface Binder extends UiBinder<Slides, Void> {
+        Binder binder = GWT.create(Binder.class);
     }
     
     @Override
     protected void buildSlides() {
-        addNotesSlide(Title.binder);
-//        addWidgetNotesSlide(EmptyCode.binder);
-//        addNotesSlide(EmptySlide.binder);
+        addMultiSlide(Binder.binder);
         addTableOfContent();
     }
     

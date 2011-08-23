@@ -1,0 +1,122 @@
+<!--
+
+    Copyright (C) 2011 Pierre-Yves Ricau (py.ricau at gmail.com)
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not
+    use this file except in compliance with the License. You may obtain a copy of
+    the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed To in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations under
+    the License.
+
+-->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
+    xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
+>
+
+  <ui:style>
+	.wrong {
+		text-decoration: line-through;
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.good {
+		font-size: 20px;
+		line-height: 20px;
+	}
+  </ui:style>
+
+  <rs:Slides>
+    <rs:Slide>
+      <notes>10h20 => 10h50 : Android (30 min)</notes>
+      <div class="section intro">
+        <h2>Android</h2>
+        <p></p>
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <h1>Historique</h1>
+      <div class="section">
+          <h2></h2>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <h1></h1>
+      Forces en présence (iOS, WP7)
+      <div class="section">
+          <h2></h2>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <h1></h1>
+      Création d'application est simple : allez lire les tutos sur le site officiel
+      <div class="section">
+          <h2></h2>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <h1></h1>
+      Fondations permettant à ce système de fonctionner en mariant ouverture et sécurité
+      
+  - Os Linux
+  - 1 app = 1 process (ex windows) = 1 user (=> sécurité) = 1 chemin accessible
+  - fork zygote (expliquer fork), expliquer VM (et problème démarrage)
+  - Principe des permissions (à l'install) => accès internet, accès GPS, etc.
+  - La VM : langage Java, compilé en bytecode, compilé en Dex, interprété par Dalvik VM, optimisé en code natif avec JIT.
+  Manifest, ressources.
+  Décrire l'archi, le fonctionnement d'une application.
+      <div class="section">
+          <h2></h2>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="Questions">
+    
+      <notes>
+        <ul>
+          <li>10h50 - 11h00</li>
+          <li>Répéter les questions</li>
+        </ul>
+      </notes>
+      
+      <div class="section intro">
+        <h2>Questions ?</h2>
+        <p class="{style.wrong}">Combien tu gagnes ?</p>
+        <p class="{style.wrong}">I can haz cheezburger?</p>
+        <p class="{style.good}">Bon pour le CV ?</p>
+      </div>
+      
+    </rs:Slide>
+
+  </rs:Slides>
+
+</ui:UiBinder>

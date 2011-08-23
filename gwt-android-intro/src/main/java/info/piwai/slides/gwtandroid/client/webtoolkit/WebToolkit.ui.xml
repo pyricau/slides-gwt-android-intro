@@ -1,0 +1,221 @@
+<!--
+
+    Copyright (C) 2011 Pierre-Yves Ricau (py.ricau at gmail.com)
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not
+    use this file except in compliance with the License. You may obtain a copy of
+    the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed To in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations under
+    the License.
+
+-->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
+    xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
+>
+
+  <ui:style>
+	.wrong {
+		text-decoration: line-through;
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.good {
+		font-size: 20px;
+		line-height: 20px;
+	}
+  </ui:style>
+
+  <rs:Slides>
+  
+    <rs:Slide>
+    
+      <notes>
+        <ul>
+          <li>9h10 - 10h00</li>
+          <li>Qui a déjà entendu parler de GWT ?</li>
+          <li>Questions à la fin</li>
+        </ul>
+      </notes>    
+      
+      <div class="section intro">
+        <h2>Google Web Toolkit</h2>
+        <p>(GWT pour les intimes)</p>
+      </div>
+      
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Une page web pour les nuls
+Pour les noobs / ASI 3 ?
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+HTML et CSS
+=> Qui connaît HTML / CSS ?      
+HTML : langage de structuration d'un document
+CSS : language de mise en forme
+Deux exemples de code (avec conneries dedans)
+ça bouge pas
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Javascript
+=> Qui connaît Javascript?
+Ajoute de la dynamique, en modifiant la structure de la page.
+Le tchat facebook, c'est du javascript, vous restez sur la même page et l'affichage se met à jour. 
+Un exemple de code JS (onclick, alert => ajouter un bouton dans le slide)
+Javascript : s'exécute dans le navigateur     
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+ASI4 / 5 : JS existe aussi côté serveur en 2011 : node.js      
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Cool ?
+Tout va pour le mieux dans le meilleur des mondes ?
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+WTF JS
+Javascript http://wtfjs.com => pas clair, problème multi navigateurs, problèmes détectés à l'exécution      
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Java : historique rapide, utilisations, jvm, Java Vs Bytecode
+=> Qui connaît Java ?
+syntaxe C++, caca      
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Site Web vs Application Web
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Site Web
+l'utilisateur navigue de page en page.      
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+VS      
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Application web : l'utilisateur réalise des opérations (chercher un peu la diff sur Google)      
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Problèmes solutionnés par GWT      
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+GWT => Ecrire en java, traduire en Javascript      
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Principe technique :
+- Compilation (=> les phases), permutations. DevMode.
+- Montrer la gueule du Javascript généré      
+      </div>
+    </rs:Slide>
+
+    <rs:Slide hid="">
+      <div class="section intro">
+Bouts de code (avec UiBinder)
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Réalisations :
+Screenshots : JCDecaux ? Mon routeur.      
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+concurrents (?)      
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="Questions">
+    
+      <notes>
+        <ul>
+          <li>9h50 - 10h00</li>
+          <li>Répéter les questions</li>
+        </ul>
+      </notes>
+      
+      <div class="section intro">
+        <h2>Questions ?</h2>
+        <p class="{style.wrong}">Combien tu gagnes ?</p>
+        <p class="{style.wrong}">C'est quoi Java ?</p>
+        <p class="{style.wrong}">Hello, my name is Lisa</p>
+        <p class="{style.good}">GWT &amp; Maven = copains ?</p>
+        <p class="{style.good}">Bon pour le CV ?</p>
+      </div>
+      
+    </rs:Slide>
+    
+    <rs:Slide hid="Pause">
+    
+      <notes>
+        <ul>
+          <li>10h00 - 10h15</li>
+          <li>Retour élèves 10h15 - 10h20</li>
+        </ul>
+      </notes>
+      
+      <div class="section intro">
+        <h2>Pause</h2>
+        <p>(n'oubliez pas de revenir)</p>
+      </div>
+      
+    </rs:Slide>    
+    
+  </rs:Slides>
+
+</ui:UiBinder>

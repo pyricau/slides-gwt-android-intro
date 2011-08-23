@@ -15,36 +15,21 @@
  */
 package info.piwai.slides.gwtandroid.client.introduction;
 
-import info.piwai.rockslide.client.shownotes.ElementSlideNotes;
 import info.piwai.rockslide.client.slides.Chapter;
+import info.piwai.rockslide.client.ui.Slides;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.uibinder.client.UiTemplate;
 
 public class Introduction extends Chapter {
 
-    @UiTemplate("Title.ui.xml")
-    interface Title extends UiBinder<Element, ElementSlideNotes> {
-        Title binder = GWT.create(Title.class);
-    }
-    
-    @UiTemplate("QuiSuisJe.ui.xml")
-    interface QuiSuisJe extends UiBinder<Element, ElementSlideNotes> {
-        QuiSuisJe binder = GWT.create(QuiSuisJe.class);
-    }
-    
-    @UiTemplate("Excilys.ui.xml")
-    interface Excilys extends UiBinder<Element, ElementSlideNotes> {
-        Excilys binder = GWT.create(Excilys.class);
+    interface Binder extends UiBinder<Slides, Void> {
+        Binder binder = GWT.create(Binder.class);
     }
     
     @Override
     protected void buildSlides() {
-        addNotesSlide(Title.binder);
-        addNotesSlide(QuiSuisJe.binder);
-        addNotesSlide(Excilys.binder);
+        addMultiSlide(Binder.binder);
         addTableOfContent();
     }
 }

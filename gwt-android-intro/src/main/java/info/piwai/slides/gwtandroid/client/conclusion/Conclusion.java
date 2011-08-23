@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package info.piwai.slides.gwtandroid.client.android;
+package info.piwai.slides.gwtandroid.client.conclusion;
 
 import info.piwai.rockslide.client.slides.Chapter;
 import info.piwai.rockslide.client.ui.Slides;
@@ -21,7 +21,7 @@ import info.piwai.rockslide.client.ui.Slides;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 
-public class Android extends Chapter {
+public class Conclusion extends Chapter {
 
     interface Binder extends UiBinder<Slides, Void> {
         Binder binder = GWT.create(Binder.class);

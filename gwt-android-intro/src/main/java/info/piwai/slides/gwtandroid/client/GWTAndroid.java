@@ -7,6 +7,7 @@ import info.piwai.rockslide.client.slides.PresentationHeader;
 import info.piwai.rockslide.client.slides.TableOfContentFactory;
 import info.piwai.rockslide.sh.client.SyntaxHighlighter;
 import info.piwai.slides.gwtandroid.client.android.Android;
+import info.piwai.slides.gwtandroid.client.conclusion.Conclusion;
 import info.piwai.slides.gwtandroid.client.introduction.Introduction;
 import info.piwai.slides.gwtandroid.client.playn.PlayN;
 import info.piwai.slides.gwtandroid.client.webtoolkit.WebToolkit;
@@ -44,6 +45,7 @@ public class GWTAndroid extends PresentationEntryPoint {
         holder.addChapter(new WebToolkit());
         holder.addChapter(new Android());
         holder.addChapter(new PlayN());
+        holder.addChapter(new Conclusion());
 
         header = new PresentationHeader(holder);
     }
