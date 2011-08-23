@@ -18,8 +18,10 @@ xmlns:ui='urn:ui:com.google.gwt.uibinder'
     <div ui:field="notes">
     <ul>
       <li>9h05 - 9h06</li>
+      <li>Tutoyez-moi</li>
+      <li>Portables à la fin</li>
       <li>Excilys: deux ans</li>
-      <li>A votre place, Fabrice m'a convaincu</li>
+      <li>Fabrice m'a convaincu</li>
     </ul>
     </div>
     <h1>Qui suis-je ?</h1>

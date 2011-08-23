@@ -5,7 +5,6 @@ import info.piwai.rockslide.client.slides.ChapterHolder;
 import info.piwai.rockslide.client.slides.Presentable;
 import info.piwai.rockslide.client.slides.PresentationHeader;
 import info.piwai.rockslide.client.slides.TableOfContentFactory;
-import info.piwai.rockslide.client.slides.ULTableOfContent;
 import info.piwai.rockslide.sh.client.SyntaxHighlighter;
 import info.piwai.slides.gwtandroid.client.android.Android;
 import info.piwai.slides.gwtandroid.client.introduction.Introduction;

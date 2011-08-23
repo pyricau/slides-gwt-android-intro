@@ -4,7 +4,10 @@ xmlns:ui='urn:ui:com.google.gwt.uibinder'
 >
   <div>
     <div ui:field="notes">
-    
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
     <h1></h1>
     <div class="section">

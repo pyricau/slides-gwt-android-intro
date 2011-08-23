@@ -42,11 +42,23 @@ public class WebToolkit extends Chapter {
         EmptySlide binder = GWT.create(EmptySlide.class);
     }
     
+    @UiTemplate("Pause.ui.xml")
+    interface Pause extends UiBinder<Element, ElementSlideNotes> {
+        Pause binder = GWT.create(Pause.class);
+    }
+    
+    @UiTemplate("Questions.ui.xml")
+    interface Questions extends UiBinder<Element, ElementSlideNotes> {
+        Questions binder = GWT.create(Questions.class);
+    }
+    
     @Override
     protected void buildSlides() {
         addNotesSlide(Title.binder);
 //        addWidgetNotesSlide(EmptyCode.binder);
 //        addNotesSlide(EmptySlide.binder);
+        addNotesSlide(Questions.binder);
+        addNotesSlide(Pause.binder);
         addTableOfContent();
     }
     

@@ -5,17 +5,12 @@ xmlns:ui='urn:ui:com.google.gwt.uibinder'
   <div>
     <div ui:field="notes">
       <ul>
-        <li></li>
-        <li></li>
+        <li>10h00 - 10h15</li>
       </ul>
     </div>
-    <h1></h1>
-    <div class="section">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>  
+    <div class="section intro">
+      <h2>Pause</h2>
+      <p>(n'oubliez pas de revenir)</p>
+    </div>
   </div>    
 </ui:UiBinder>
