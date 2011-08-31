@@ -22,6 +22,16 @@
   xmlns:rs="urn:import:info.piwai.rockslide.client.slides"
 >
 	<g:HTMLPanel>
+		<div ui:field="notes">
+			<ul>
+				<li>Introduction: 9h05-9h10</li>
+				<li>GWT: 9h10-9h40 Questions: 9h40-9h45</li>
+				<li>Pause: 09h45-10h05</li>
+				<li>Android: 10h05-10h35 Questions: 10h35-10h40</li>
+				<li>Play'n: 10h40-10h50 Questions: 10h50-10h55 </li>
+				<li>Conclusion: 10h55-11h00</li>
+			</ul>
+		</div>
 		<h1>Table des matières</h1>
 		<div class="section">
 			<rs:ULPanel ui:field="ulPanel" />

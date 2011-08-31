@@ -10,6 +10,9 @@
     <inherits name='info.piwai.rockslide.sh.xml.XmlSH'/>
     <stylesheet src="styles/shThemeEclipse.css"/>
     
+    <!-- Markdown support -->
+    <inherits name='info.piwai.rockslide.md.Markdown'/>    
+    
 	<!-- Injects ga.js -->
 <!--     <inherits name='info.piwai.rockslide.ga.SlideAnalytics'/> -->
     
