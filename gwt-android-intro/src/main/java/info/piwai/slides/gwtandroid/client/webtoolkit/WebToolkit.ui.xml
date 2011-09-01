@@ -21,6 +21,8 @@
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
+    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'    
+    
 >
 
   <ui:style>
@@ -37,24 +39,17 @@
 
   <rs:Slides>
   
-    <rs:Slide>
-    
-      <notes>
-        <ul>
-          <li>9h10 - 10h00</li>
-          <li>Qui a déjà entendu parler de GWT ?</li>
-          <li>Questions à la fin</li>
-        </ul>
-      </notes>    
-      
-      <div class="section intro">
-        <h2>Google Web Toolkit</h2>
-        <p>(GWT pour les intimes)</p>
-      </div>
-      
-    </rs:Slide>
-    
-    <rs:Slide hid="">
+    <md:MDSlide intro="true">
+   		<mdnotes><pre>
+ * 9h10 - 9h40
+ * Qui a déjà entendu parler de GWT ?
+ * Questions à la fin
+		</pre></mdnotes><pre>
+## Google Web Toolkit
+(GWT pour les intimes)
+    </pre></md:MDSlide>  
+
+    <rs:Slide hid="" intro="true">
       <div class="section intro">
 Une page web pour les nuls
 Pour les noobs / ASI 3 ?
@@ -184,7 +179,7 @@ concurrents (?)
     
       <notes>
         <ul>
-          <li>9h50 - 10h00</li>
+          <li>9h40 - 9h45</li>
           <li>Répéter les questions</li>
         </ul>
       </notes>
@@ -204,7 +199,7 @@ concurrents (?)
     
       <notes>
         <ul>
-          <li>10h00 - 10h15</li>
+          <li>9h45 - 10h05</li>
           <li>Retour élèves 10h15 - 10h20</li>
         </ul>
       </notes>

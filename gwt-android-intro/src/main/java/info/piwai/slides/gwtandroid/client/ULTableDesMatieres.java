@@ -15,10 +15,10 @@
  */
 package info.piwai.slides.gwtandroid.client;
 
+import info.piwai.rockslide.client.shownotes.WidgetSlideNotes;
 import info.piwai.rockslide.client.slides.ChapterHolder;
 import info.piwai.rockslide.client.slides.ChapterName;
 import info.piwai.rockslide.client.slides.ULPanel;
-import info.piwai.rockslide.client.slides.WidgetSlide;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -26,7 +26,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Widget;
 
-public class ULTableDesMatieres extends WidgetSlide {
+public class ULTableDesMatieres extends WidgetSlideNotes {
 
     interface Binder extends UiBinder<Widget, ULTableDesMatieres> {
     }
