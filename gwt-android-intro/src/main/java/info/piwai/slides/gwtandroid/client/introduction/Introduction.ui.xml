@@ -35,7 +35,7 @@
 
   <rs:Slides>
   
-    <rs:Slide>
+    <rs:Slide intro="true">
     
       <notes>
         <ul>
@@ -43,11 +43,9 @@
         </ul>
       </notes>
       
-      <div class="section intro">
         <h2>Bonjour !</h2>
         <p><em>À la découverte de GWT et Android</em></p>
         <p>7 septembre 2011, ASI, INSA Rouen</p>
-      </div>
       
     </rs:Slide>
     

@@ -100,33 +100,4 @@ h2 a, h2 a:visited, h2 a:hover {
 	background: literal("-moz-linear-gradient(left top, #62c6ed, #91d7f2)");
 }
 
-div.presentation {
-	height: 750px !important;
-	margin-top: -375px !important;
-}
-
-.presentationHeader {
-	margin-top: -375px !important;
-}
-
-div.slide {
-	width: 880px !important;
-	height: 680px !important;
-	margin-top: -340px !important;
-}
-
-.slide.past {
-	margin-left: -1360px !important;
-}
-
-.slide.current {
-	margin-left: -440px !important;
-}
-
-.slide.future {
-	margin-left: 480px !important;
-}
-
-
-
 

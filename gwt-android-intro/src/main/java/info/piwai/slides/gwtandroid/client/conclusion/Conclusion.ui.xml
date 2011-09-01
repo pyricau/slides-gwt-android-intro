@@ -31,7 +31,7 @@
 
   <rs:Slides>
   
-    <rs:Slide>
+    <rs:Slide intro="true">
     
       <notes>
         <ul>
@@ -40,10 +40,8 @@
         </ul>
       </notes>    
       
-      <div class="section intro">
         <h2>Conclusion</h2>
         <p></p>
-      </div>
       
     </rs:Slide>
     

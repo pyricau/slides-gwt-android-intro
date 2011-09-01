@@ -37,12 +37,10 @@
   </ui:style>
 
   <rs:Slides>
-    <rs:Slide>
+    <rs:Slide intro="true">
       <notes>10h05 => 10h35 : Android (30 min)</notes>
-      <div class="section intro">
         <h2>Android</h2>
         <p></p>
-      </div>
     </rs:Slide>
     
     <md:MDSlide><mdnotes><pre>
@@ -78,8 +76,11 @@
     
     <md:MDSlide><mdnotes><pre>
     </pre></mdnotes><pre>
-# t
-## t
+# Linux inside
+## Un bon vieux pinguin !
+ * 1 App `=` 1 user ID
+ * `=` 1 process = 1 VM
+ * `=` 
     </pre></md:MDSlide>   
     
     <md:MDSlide><mdnotes><pre>
