@@ -78,7 +78,7 @@ h2 a, h2 a:visited, h2 a:hover {
 }
 
 
-.tag {
+.tag, code {
 	font-family: 'Arial';
 	color: sectionTextColor;
 	display: inline-block;

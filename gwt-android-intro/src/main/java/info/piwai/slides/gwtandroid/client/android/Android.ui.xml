@@ -21,6 +21,7 @@
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
+    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'        
 >
 
   <ui:style>
@@ -44,20 +45,51 @@
       </div>
     </rs:Slide>
     
-    <rs:Slide hid="">
-      <h1>Historique</h1>
-      <div class="section">
-          <h2></h2>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-      </div>
-    </rs:Slide>
+    <md:MDSlide><mdnotes><pre>
+ * + activations qu'Iphone
+ * Open Source, explication
+ * Apps en C
+ logo android ?
+    </pre></mdnotes><pre>
+# Android, méçékoiça ?
+## Système d'exploitation mobile
+ * Open Source, merci Google !
+ * 500 000 activations **par jour**
+ * `Java Apps`
+    </pre></md:MDSlide>     
+    
+     <md:MDSlide intro="true"><pre>
+## Au coeur d'Android
+    </pre></md:MDSlide>
+    
+    <md:MDSlide><mdnotes><pre>
+ * .class: bytecode
+ * DEX: Dalvik Executable
+ * APK: Android Package
+ * APK = app
+    </pre></mdnotes><pre>
+# Construction d'une application
+## La moulinette magique
+ * **.java** `=>` **.class**
+ * **.class** `=>` **.dex**
+ * **.dex** `=>` **.apk**
+    </pre></md:MDSlide>
+    
+    
+    <md:MDSlide><mdnotes><pre>
+    </pre></mdnotes><pre>
+# t
+## t
+    </pre></md:MDSlide>   
+    
+    <md:MDSlide><mdnotes><pre>
+    </pre></mdnotes><pre>
+# t
+## t
+    </pre></md:MDSlide>         
     
     <rs:Slide hid="">
-      <h1></h1>
-      Forces en présence (iOS, WP7)
+      <h1>Historique</h1>
       <div class="section">
           <h2></h2>
           <ul>
@@ -90,6 +122,14 @@
   - La VM : langage Java, compilé en bytecode, compilé en Dex, interprété par Dalvik VM, optimisé en code natif avec JIT.
   Manifest, ressources.
   Décrire l'archi, le fonctionnement d'une application.
+  
+  1 slide Android, vue + code java
+  
+  AndroidAnnotations => 1 slide ?
+
+  
+  
+  
       <div class="section">
           <h2></h2>
           <ul>

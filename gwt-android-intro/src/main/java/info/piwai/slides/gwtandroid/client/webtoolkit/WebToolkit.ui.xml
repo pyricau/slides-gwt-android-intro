@@ -76,37 +76,15 @@ Le tchat facebook, c'est du javascript, vous restez sur la même page et l'affic
 Un exemple de code JS (onclick, alert => ajouter un bouton dans le slide)
 Javascript : s'exécute dans le navigateur     
       </div>
-    </rs:Slide>    
+    </rs:Slide>
     
     <rs:Slide hid="">
       <div class="section intro">
 ASI4 / 5 : JS existe aussi côté serveur en 2011 : node.js      
       </div>
-    </rs:Slide>    
+    </rs:Slide> 
     
-    <rs:Slide hid="">
-      <div class="section intro">
-Cool ?
-Tout va pour le mieux dans le meilleur des mondes ?
-      </div>
-    </rs:Slide>    
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-WTF JS
-Javascript http://wtfjs.com => pas clair, problème multi navigateurs, problèmes détectés à l'exécution      
-      </div>
-    </rs:Slide>    
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-Java : historique rapide, utilisations, jvm, Java Vs Bytecode
-=> Qui connaît Java ?
-syntaxe C++, caca      
-      </div>
-    </rs:Slide>    
-    
-    <rs:Slide hid="">
+           <rs:Slide hid="">
       <div class="section intro">
 Site Web vs Application Web
       </div>
@@ -133,6 +111,29 @@ Application web : l'utilisateur réalise des opérations (chercher un peu la dif
     
     <rs:Slide hid="">
       <div class="section intro">
+Cool ?
+Tout va pour le mieux dans le meilleur des mondes ?
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+WTF JS
+Javascript http://wtfjs.com => pas clair, problème multi navigateurs, problèmes détectés à l'exécution      
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
+Java : historique rapide, utilisations, jvm, Java Vs Bytecode
+=> Qui connaît Java ?
+syntaxe C++, caca      
+Avantages Java
+      </div>
+    </rs:Slide>    
+    
+    <rs:Slide hid="">
+      <div class="section intro">
 Problèmes solutionnés par GWT      
       </div>
     </rs:Slide>
@@ -147,7 +148,7 @@ GWT => Ecrire en java, traduire en Javascript
       <div class="section intro">
 Principe technique :
 - Compilation (=> les phases), permutations. DevMode.
-- Montrer la gueule du Javascript généré      
+- Montrer la gueule du Javascript généré
       </div>
     </rs:Slide>
 
@@ -170,10 +171,30 @@ concurrents (?)
       </div>
     </rs:Slide>
     
-    <rs:Slide hid="">
-      <div class="section intro">
-      </div>
-    </rs:Slide>
+    
+    <md:MDSlide hid="">
+      <mdnotes><pre>
+ * 
+ * 
+    </pre></mdnotes><pre>
+#
+##
+ * 
+ *
+ *
+    </pre></md:MDSlide>
+    
+    <md:MDSlide hid="">
+      <mdnotes><pre>
+ * 
+ * 
+    </pre></mdnotes><pre>
+#
+##
+ * 
+ *
+ *
+    </pre></md:MDSlide> 
     
     <rs:Slide hid="Questions">
     
