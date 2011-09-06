@@ -40,6 +40,9 @@
 		font-size: 20px;
 		line-height: 20px;
 	}
+	.big {
+		font-size: 40px;
+	}
   </ui:style>
 
   <rs:Slides>
@@ -229,15 +232,12 @@ Certains disent "gwit" (gouit)
     
     <md:MDSlide><mdnotes><pre>
 	</pre></mdnotes><pre>
-# Un exemple
+# Méga simple !
+## Un exemple
     	</pre><sh:Code brush="{java.brush}"><pre>
 			public class Exemple implements EntryPoint {
 			  
 			    public void onModuleLoad() {
-
-			        Label label = new Label("I like GWT très beaucoup");
-			        RootPanel.get().add(label);
-
 			        Button button = new Button("Click me, I'm famous!");
 			        button.addClickHandler(new ClickHandler() {
 			            public void onClick(ClickEvent event) {
@@ -248,8 +248,26 @@ Certains disent "gwit" (gouit)
 			    }
 			}</pre>
 		</sh:Code>
-		<g:Label>I like GWT très beaucoup</g:Label>
-		<div><content:ButtonExample>Click me, I'm famous!</content:ButtonExample></div>
+		<div><content:ButtonExample addStyleNames="{style.big}">Click me, I'm famous!</content:ButtonExample></div>
+    </md:MDSlide>
+
+    <md:MDSlide><mdnotes><pre>
+	</pre></mdnotes><pre>
+# Résultat
+## Optimisé ;-)
+    	</pre><sh:Code brush="{jscript.brush}"><pre>
+function R(b){return function(){try{return S(b,this,arguments)}catch(a){throw a}}}
+function xf(a){a.style['left']=jp;a.style['top']=jp;a.style['position']=jp}
+function Ud(a){var b;b=ce(Wd,a);if(!b&amp;&amp;!!a){a.cancelBubble=true;a.returnValue=false}return b}
+function Nl(a,b){var c;while(a.G()){c=a.H();if(b==null?c==null:J(b,c)){return a}}return null}
+function wb(a){var b,c;c=a.tagName;b=a.scopeName;if(b==null||pl('html',b)){return c}return b+kp+c}
+function nb(a){var b,c;b=(c=a.join(jp),a.length=a.explicitLength=0,c);a[a.explicitLength++]=b;return b}
+function Ii(a,b){var c;c=vb($doc,'li');a.a.appendChild(c);ef(b);Rg(a.d,b);c.appendChild(b.n);ff(b,a)}
+function Nd(){if(!Ld){Ld=vb($doc,np);Ld.style.display='none';(sg(),$doc.body).appendChild(Ld)}}
+function ng(){hg.call(this,vb($doc,Np));this.n[Mp]='gwt-InlineLabel';Zf(this.a,' | ',false)}
+function Cc(a){H.call(this,a.R()==0?null:od(a.T(fd(Fd,{20:1,33:1},9,0,0)),20)[0]);this.a=a}
+function lm(a,b){return b==null?nm(a):b!=null&amp;&amp;b.cM&amp;&amp;!!b.cM[1]?om(a,od(b,1)):mm(a,b,~~b.hC())}</pre>
+		</sh:Code>
     </md:MDSlide>
     
     <rs:Slide hid="">
