@@ -22,8 +22,13 @@
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
     xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'    
+    xmlns:content='urn:import:info.piwai.slides.gwtandroid.client.webtoolkit'    
     
 >
+
+  <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
+  <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
+  <ui:with field="jscript" type="info.piwai.rockslide.sh.jscript.client.JScriptSH"/>
 
   <ui:style>
 	.wrong {
@@ -50,98 +55,202 @@
 (Google Web Toolkit pour les intimes)
     </pre></md:MDSlide>  
 
-    <rs:Slide hid="" intro="true">
-Une page web pour les nuls
-Pour les noobs / ASI 3 ?
-    </rs:Slide>
+    <md:MDSlide intro="true"><mdnotes><pre>
+* ASI 3 4 5 => tous niveaux
+* => les bases
+* Posez questions si pas compris, sinon fin
+	</pre></mdnotes><pre>
+## ATTENTION
+Cette présentation contient du code.
+
+Coder provoque des sensations pouvant créer une dépendance.
+    </pre></md:MDSlide>  
+
+    <md:MDSlide intro="true"><mdnotes><pre>
+	</pre></mdnotes><pre>
+## Langages du web
+Pour les noobs
+    </pre></md:MDSlide>
+
+    <md:MDSlide><mdnotes><pre>
+* Qui connaît ?
+* statique, pas dynamique
+* Head / Body / DOM = structure
+	</pre></mdnotes><pre>
+# HTML / CSS
+## Structure / mise en forme
+    </pre>
+    	<sh:Code brush="{xml.brush}" highlight="11"><pre>
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;English for professional purposes&lt;/title&gt;
+		&lt;style type="text/css"&gt;
+  			body {
+   				color: purple;
+    		}
+  		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Hello, my name is Lisa.&lt;/p&gt;
+		&lt;p&gt;I'm from Wales!&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+     	</pre></sh:Code>  
+    </md:MDSlide>  
+
+    <md:MDSlide><mdnotes><pre>
+* Qui connaît ?
+* Dynamique
+* Navigateur 
+* Ex: Tchat Facebook
+* jQuery
+	</pre></mdnotes><pre>
+# Javascript
+## Ça bouge !
+    </pre>
+    	<sh:Code brush="{jscript.brush}"><pre>
+			$(document).ready(function() {
+				alert("Hi Lisa, I'm Francis!");
+			});</pre>
+		</sh:Code>
+		<sh:Code brush="{jscript.brush}"><pre>
+		 	$(document).ready(function() {
+   				$("#asi").find("li").each(function(i) {
+     				$(this).append( "ASI " + i );
+   				});
+ 			});</pre>
+ 		</sh:Code>
+    </md:MDSlide>
+
+   <md:MDSlide><mdnotes><pre>
+* Qui connaît ?
+* Créé en 2009, explosion 2011
+* Nombre de connexions
+	</pre></mdnotes><pre>
+# node.js
+## JS côté serveur
+<span class="em">nodejs</span>.org
+    </pre>
+    <div><code>&lt;hors sujet&gt;</code>
+    	<sh:Code brush="{jscript.brush}"><pre>
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello ASI\n');
+}).listen(1337, "127.0.0.1");
+console.log('Server running at http://127.0.0.1:1337/');</pre>
+		</sh:Code>
+		<code>&lt;/hors sujet&gt;</code></div>
+    </md:MDSlide>
+
+
+    <md:MDSlide><mdnotes><pre>
+* Wikipédia vs Banque en ligne
+* + en + d'applications
+	</pre></mdnotes><pre>
+# Site Web VS Application Web
+## Fais la diff' !
+
+  * pages
+  * intéraction
+  * complexité
+    </pre></md:MDSlide>
     
-    <rs:Slide hid="">
-      <div class="section intro">
-HTML et CSS
-=> Qui connaît HTML / CSS ?      
-HTML : langage de structuration d'un document
-CSS : language de mise en forme
-Deux exemples de code (avec conneries dedans)
-ça bouge pas
-      </div>
-    </rs:Slide>    
+    <md:MDSlide intro="true"><pre>
+## OK?
+Is that clear so far?
+    </pre></md:MDSlide>  
     
-    <rs:Slide hid="">
-      <div class="section intro">
-Javascript
-=> Qui connaît Javascript?
-Ajoute de la dynamique, en modifiant la structure de la page.
-Le tchat facebook, c'est du javascript, vous restez sur la même page et l'affichage se met à jour. 
-Un exemple de code JS (onclick, alert => ajouter un bouton dans le slide)
-Javascript : s'exécute dans le navigateur     
-      </div>
-    </rs:Slide>
+   <md:MDSlide><mdnotes><pre>
+* Maintenance
+* Runtime
+* Fuites mémoire
+	</pre></mdnotes><pre>
+# Javascript peut rendre fou
+## A consommer avec modération
+  * Support navigateurs
+  * <span class="em">wtfjs</span>.com
+    </pre>
+    	<sh:Code brush="{jscript.brush}"><pre>    	
+3 == "3" // true
+
+3 > 2 > 1 // false
+
+3..toString(); // "3"
+
+new Array([],null,undefined,null) == ",,,"; // true    	
+    	
+typeof NaN // number    	
+
+Number.MAX_VALUE*1.0000000000000001 === (1/0) // false
+Number.MAX_VALUE*1.0000000000000002 === (1/0) // true
+		</pre></sh:Code>
+    </md:MDSlide>
     
-    <rs:Slide hid="">
-      <div class="section intro">
-ASI4 / 5 : JS existe aussi côté serveur en 2011 : node.js      
-      </div>
-    </rs:Slide> 
+    <md:MDSlide><mdnotes><pre>
+* Qui connaît ?
+* syntaxe proche C++ (C caca, C++...)
+* Excilys = Java
+* Android, GWT, Cloud (AppEngine, Heroku, CloudBees)
+	</pre></mdnotes><pre>
+# Java
+## Ça déchire sa mémé !
+* `Java` => `bytecode` => `JVM`
+* GC, Typage Statique, Outillé
+* `Embarqué` => `Applets` => `Serveur` => `Partout ?!`
+    	</pre><sh:Code brush="{java.brush}"><pre>
+			public class Main {
+			    public static void main(String[] args) {
+					System.out.println("Quand le jazz est là...");
+				}
+			}</pre>
+		</sh:Code>
+    </md:MDSlide>
     
-           <rs:Slide hid="">
-      <div class="section intro">
-Site Web vs Application Web
-      </div>
-    </rs:Slide>    
+    <md:MDSlide intro="true"><pre>
+## GWT
+Certains disent "gwit" (gouit)
+    </pre></md:MDSlide>
     
-    <rs:Slide hid="">
-      <div class="section intro">
-Site Web
-l'utilisateur navigue de page en page.      
-      </div>
-    </rs:Slide>
+    <md:MDSlide><mdnotes><pre>
+* Qui connaît ?
+* IE 6 => performant
+* Applications complexes
+* Fuites mémoires
+	</pre></mdnotes><pre>
+# Principe
+## Die Javascript, die!
+* `Java` => `Javascript`
+* Outillage => productivité
+* Code optimisé, multi navigateurs
+* Cible : RIA
+    	</pre>
+    </md:MDSlide>
     
-    <rs:Slide hid="">
-      <div class="section intro">
-VS      
-      </div>
-    </rs:Slide>
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-Application web : l'utilisateur réalise des opérations (chercher un peu la diff sur Google)      
-      </div>
-    </rs:Slide>
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-Cool ?
-Tout va pour le mieux dans le meilleur des mondes ?
-      </div>
-    </rs:Slide>    
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-WTF JS
-Javascript http://wtfjs.com => pas clair, problème multi navigateurs, problèmes détectés à l'exécution      
-      </div>
-    </rs:Slide>    
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-Java : historique rapide, utilisations, jvm, Java Vs Bytecode
-=> Qui connaît Java ?
-syntaxe C++, caca      
-Avantages Java
-      </div>
-    </rs:Slide>    
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-Problèmes solutionnés par GWT      
-      </div>
-    </rs:Slide>
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-GWT => Ecrire en java, traduire en Javascript      
-      </div>
-    </rs:Slide>
+    <md:MDSlide><mdnotes><pre>
+	</pre></mdnotes><pre>
+# Un exemple
+    	</pre><sh:Code brush="{java.brush}"><pre>
+			public class Exemple implements EntryPoint {
+			  
+			    public void onModuleLoad() {
+
+			        Label label = new Label("I like GWT très beaucoup");
+			        RootPanel.get().add(label);
+
+			        Button button = new Button("Click me, I'm famous!");
+			        button.addClickHandler(new ClickHandler() {
+			            public void onClick(ClickEvent event) {
+			                Window.alert("Mais c'est trop simple!");
+			            }
+			        });
+			        RootPanel.get().add(button);
+			    }
+			}</pre>
+		</sh:Code>
+		<g:Label>I like GWT très beaucoup</g:Label>
+		<div><content:ButtonExample>Click me, I'm famous!</content:ButtonExample></div>
+    </md:MDSlide>
     
     <rs:Slide hid="">
       <div class="section intro">
@@ -163,37 +272,6 @@ Réalisations :
 Screenshots : JCDecaux ? Mon routeur.      
       </div>
     </rs:Slide>
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-concurrents (?)      
-      </div>
-    </rs:Slide>
-    
-    
-    <md:MDSlide hid="">
-      <mdnotes><pre>
- * 
- * 
-    </pre></mdnotes><pre>
-#
-##
- * 
- *
- *
-    </pre></md:MDSlide>
-    
-    <md:MDSlide hid="">
-      <mdnotes><pre>
- * 
- * 
-    </pre></mdnotes><pre>
-#
-##
- * 
- *
- *
-    </pre></md:MDSlide> 
     
     <rs:Slide hid="Questions">
     

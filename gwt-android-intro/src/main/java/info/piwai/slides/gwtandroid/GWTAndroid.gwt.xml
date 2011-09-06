@@ -7,6 +7,7 @@
     
     <!-- Syntax Highlighting -->
     <inherits name='info.piwai.rockslide.sh.java.JavaSH'/>
+    <inherits name='info.piwai.rockslide.sh.jscript.JScriptSH'/>
     <inherits name='info.piwai.rockslide.sh.xml.XmlSH'/>
     <stylesheet src="styles/shThemeEclipse.css"/>
     
