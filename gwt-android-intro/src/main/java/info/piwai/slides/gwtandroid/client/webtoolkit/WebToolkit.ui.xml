@@ -29,6 +29,10 @@
   <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
   <ui:with field="jscript" type="info.piwai.rockslide.sh.jscript.client.JScriptSH"/>
+  
+  <ui:image field="devmode" src="DevModeTypical.jpg" />
+  <ui:image field="example1" src="example1.png" />
+  <ui:image field="example2" src="example2.png" />
 
   <ui:style>
 	.wrong {
@@ -43,6 +47,15 @@
 	.big {
 		font-size: 40px;
 	}
+	@sprite .devmode {
+	      gwt-image: 'devmode';
+	}
+	@sprite .example1 {
+	      gwt-image: 'example1';
+	}
+	@sprite .example2 {
+	      gwt-image: 'example2';
+	}	
   </ui:style>
 
   <rs:Slides>
@@ -252,9 +265,24 @@ Certains disent "gwit" (gouit)
     </md:MDSlide>
 
     <md:MDSlide><mdnotes><pre>
+* AST = Abstract syntax tree
+* Optims en boucle
+* 6 permutations par défauts (6 navigateurs)
+* 2 langues = * 2 
+    </pre></mdnotes><pre>
+# Compilation
+## Régime minceur et autres optimisations
+
+* `Java` => `Java AST` => `Optim Java AST` => `JS AST`
+* => `Optim JS AST` => `Obfuscation` => `JS`
+* IE6 + EN = 1 permutation
+* 1 JS par permutation
+    </pre></md:MDSlide>
+
+    <md:MDSlide><mdnotes><pre>
 	</pre></mdnotes><pre>
 # Résultat
-## Optimisé ;-)
+## Optimisé &amp; Obfusqué ;-)
     	</pre><sh:Code brush="{jscript.brush}"><pre>
 function R(b){return function(){try{return S(b,this,arguments)}catch(a){throw a}}}
 function xf(a){a.style['left']=jp;a.style['top']=jp;a.style['position']=jp}
@@ -269,29 +297,66 @@ function Cc(a){H.call(this,a.R()==0?null:od(a.T(fd(Fd,{20:1,33:1},9,0,0)),20)[0]
 function lm(a,b){return b==null?nm(a):b!=null&amp;&amp;b.cM&amp;&amp;!!b.cM[1]?om(a,od(b,1)):mm(a,b,~~b.hC())}</pre>
 		</sh:Code>
     </md:MDSlide>
-    
-    <rs:Slide hid="">
-      <div class="section intro">
-Principe technique :
-- Compilation (=> les phases), permutations. DevMode.
-- Montrer la gueule du Javascript généré
-      </div>
-    </rs:Slide>
 
-    <rs:Slide hid="">
-      <div class="section intro">
-Bouts de code (avec UiBinder)
-      </div>
-    </rs:Slide>
+    <md:MDSlide><mdnotes><pre>
+    </pre></mdnotes><pre>
+# DevMode
+## Et les bugs ?
+<div class="{style.devmode}"/>
+    </pre></md:MDSlide>
+
+    <md:MDSlide><mdnotes><pre>
+* Comme HTML    
+* Déclaratif VS Impératif
+  </pre></mdnotes><pre>
+# UiBinder
+## Déclaratif (mort au Swing style!)
+      </pre><sh:Code brush="{xml.brush}"><pre>
+        &lt;ui:UiBinder
+            xmlns:ui="urn:ui:com.google.gwt.uibinder"
+            xmlns:g="urn:import:com.google.gwt.user.client.ui"&gt;
+             
+            &lt;ui:style&gt;
+                .bold {
+                    font-weight: bolder;
+                }
+            &lt;/ui:style&gt;
+             
+            &lt;g:HTMLPanel&gt;
+                &lt;p class="{style.bold}"&gt;Cool text&lt;/p&gt;
+                 
+                &lt;g:ScrollPanel&gt;
+                    &lt;g:Button ui:field="button"&gt;Click me!&lt;/g:Button&gt;
+                &lt;/g:ScrollPanel&gt;
+                 
+            &lt;/g:HTMLPanel&gt;
+             
+        &lt;/ui:UiBinder&gt;
+    </pre></sh:Code>
+    </md:MDSlide>
+
+    <md:MDSlide><mdnotes><pre>
+      </pre></mdnotes><pre>
+# Exemple 1
+## Gestion d'actifs
+      </pre><div><div class="{style.example1}"/></div>
+    </md:MDSlide>
     
-    <rs:Slide hid="">
-      <div class="section intro">
-Réalisations :
-Screenshots : JCDecaux ? Mon routeur.      
-      </div>
-    </rs:Slide>
+    <md:MDSlide><mdnotes><pre>
+      </pre></mdnotes><pre>
+# Exemple 2
+## Finance personnelle
+      </pre><div><div class="{style.example2}"/></div>
+    </md:MDSlide>
     
-    <rs:Slide hid="Questions">
+    <md:MDSlide><mdnotes><pre>
+      </pre></mdnotes><pre>
+# Exemple 3
+## Un NAS (LaCie Network Space 2)
+      </pre><div>Nothing yet.</div>
+    </md:MDSlide>
+    
+    <rs:Slide hid="Questions" intro="true">
     
       <notes>
         <ul>
@@ -300,32 +365,13 @@ Screenshots : JCDecaux ? Mon routeur.
         </ul>
       </notes>
       
-      <div class="section intro">
-        <h2>Questions ?</h2>
-        <p class="{style.wrong}">Combien tu gagnes ?</p>
-        <p class="{style.wrong}">C'est quoi Java ?</p>
-        <p class="{style.wrong}">Hello, my name is Lisa</p>
-        <p class="{style.good}">GWT &amp; Maven = copains ?</p>
-        <p class="{style.good}">Bon pour le CV ?</p>
-      </div>
+      <h2>Questions ?</h2>
+      <p class="{style.wrong}">Combien tu gagnes ?</p>
+      <p class="{style.wrong}">C'est quoi Java ?</p>
+      <p class="{style.good}">GWT &amp; Maven = copains ?</p>
+      <p class="{style.good}">Bon pour le CV ?</p>
       
     </rs:Slide>
-    
-    <rs:Slide hid="Pause">
-    
-      <notes>
-        <ul>
-          <li>9h45 - 10h05</li>
-          <li>Retour élèves 10h15 - 10h20</li>
-        </ul>
-      </notes>
-      
-      <div class="section intro">
-        <h2>Pause</h2>
-        <p>(n'oubliez pas de revenir)</p>
-      </div>
-      
-    </rs:Slide>    
     
   </rs:Slides>
 

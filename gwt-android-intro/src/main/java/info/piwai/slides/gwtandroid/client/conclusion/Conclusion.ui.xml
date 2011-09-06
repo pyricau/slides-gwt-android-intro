@@ -20,56 +20,62 @@
     xmlns:ui='urn:ui:com.google.gwt.uibinder'
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
+    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'    
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
 >
 
   <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
+  
+  <ui:image field="rockslide" src="rockslide.png" />  
 
   <ui:style>
+  	@sprite .rockslide {
+	      gwt-image: 'rockslide';
+	}
   </ui:style>
 
   <rs:Slides>
+
+
+    <md:MDSlide intro="true">
+      <mdnotes><pre>
+ * 10h55 - 11h00
+    </pre></mdnotes><pre>
+## Conclusion
+    </pre></md:MDSlide>
+
+    <md:MDSlide intro="true">
+      <mdnotes><pre>
+* 2011, Java toujours la côte
+* Java 7, Android, GWT, Play'N       
+    </pre></mdnotes><pre>
+## Java Rocks
+    </pre></md:MDSlide>
   
-    <rs:Slide intro="true">
-    
-      <notes>
-        <ul>
-          <li>10h55 - 11h00</li>
-          <li></li>
-        </ul>
-      </notes>    
-      
-        <h2>Conclusion</h2>
-        <p></p>
-      
-    </rs:Slide>
-    
-    <rs:Slide hid="">
-    
-      <notes>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </notes>
-      
-XX => 11h15 : Temps à ajouter pour conclu
-Slide sur Rockslide
-Remerciements
-11h15 => 12h00 : Fabrice, Excilys (45 min)
-      <h1></h1>
-      <div class="section">
-          <h2></h2>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-      </div>
-      <sh:Code brush="{java.brush}">
-      </sh:Code>
-      
-    </rs:Slide>
+  
+   <md:MDSlide>
+      <mdnotes><pre>
+* Présentation faite avec Rockslide
+    </pre></mdnotes><pre>
+# Rockslide
+## Slides web en GWT
+* <span class="em">pyricau</span>.github.com/<span class="em">rockslide</span>
+<div><div class="{style.rockslide}"/></div>
+    </pre></md:MDSlide>
+  
+    <md:MDSlide intro="true">
+      <mdnotes><pre>
+ * Questions si temps suffisant
+    </pre></mdnotes><pre>
+## Merci
+    </pre></md:MDSlide>
+  
+    <md:MDSlide intro="true">
+      <mdnotes><pre>
+    </pre></mdnotes><pre>
+## And now, Excilys
+    </pre></md:MDSlide>
     
   </rs:Slides>
 

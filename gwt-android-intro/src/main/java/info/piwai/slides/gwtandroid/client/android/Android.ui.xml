@@ -157,6 +157,21 @@
       </div>
       
     </rs:Slide>
+    
+    <rs:Slide hid="Pause" intro="true">
+    
+      <notes>
+        <ul>
+          <li>10h20 - 10h40</li>
+          <li>Retour élèves 10h15 - 10h20</li>
+        </ul>
+      </notes>
+      
+      <h2>Pause</h2>
+      <p>(n'oubliez pas de revenir)</p>
+      
+    </rs:Slide>    
+        
 
   </rs:Slides>
 
