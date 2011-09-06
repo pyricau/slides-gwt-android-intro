@@ -21,9 +21,8 @@
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
-    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'    
+    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'
     xmlns:content='urn:import:info.piwai.slides.gwtandroid.client.webtoolkit'    
-    
 >
 
   <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
@@ -33,7 +32,8 @@
   <ui:image field="devmode" src="DevModeTypical.jpg" />
   <ui:image field="example1" src="example1.png" />
   <ui:image field="example2" src="example2.png" />
-
+  <ui:image field="example3" src="example3.png" />
+  
   <ui:style>
 	.wrong {
 		text-decoration: line-through;
@@ -55,7 +55,11 @@
 	}
 	@sprite .example2 {
 	      gwt-image: 'example2';
-	}	
+	}
+	
+	@sprite .example3 {
+	      gwt-image: 'example3';
+	}
   </ui:style>
 
   <rs:Slides>
@@ -199,8 +203,8 @@ new Array([],null,undefined,null) == ",,,"; // true
 typeof NaN // number    	
 
 Number.MAX_VALUE*1.0000000000000001 === (1/0) // false
-Number.MAX_VALUE*1.0000000000000002 === (1/0) // true
-		</pre></sh:Code>
+Number.MAX_VALUE*1.0000000000000002 === (1/0) // true</pre>
+		</sh:Code>
     </md:MDSlide>
     
     <md:MDSlide><mdnotes><pre>
@@ -353,7 +357,7 @@ function lm(a,b){return b==null?nm(a):b!=null&amp;&amp;b.cM&amp;&amp;!!b.cM[1]?o
       </pre></mdnotes><pre>
 # Exemple 3
 ## Un NAS (LaCie Network Space 2)
-      </pre><div>Nothing yet.</div>
+      </pre><div><div class="{style.example3}"/></div>
     </md:MDSlide>
     
     <rs:Slide hid="Questions" intro="true">

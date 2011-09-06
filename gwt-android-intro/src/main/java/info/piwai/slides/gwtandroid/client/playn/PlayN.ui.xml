@@ -21,7 +21,14 @@
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
+    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'
 >
+
+  <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
+  
+  <ui:image field="toohardforyou" src="2H4U.png" />
+  
+  <ui:image field="angrybirds" src="angrybirds.png" />
 
   <ui:style>
 	.wrong {
@@ -33,50 +40,133 @@
 		font-size: 20px;
 		line-height: 20px;
 	}
+	@sprite .toohardforyou {
+		gwt-image: 'toohardforyou';
+	}
+	@sprite .angrybirds {
+		gwt-image: 'angrybirds';
+	}
   </ui:style>
 
   <rs:Slides>
-  
-    <rs:Slide intro="true">
-    
-      <notes>
-        <ul>
-          <li>10h40 => 10h50 : Forplay</li>
-        </ul>
-      </notes>
-    
-        <h2>Play'N</h2>
-        <p></p>
-      
-    </rs:Slide>
-    
-    <rs:Slide hid="">
-    
-      <notes>
-        <ul>
-          <li></li>
-        </ul>
-      </notes>
-    
-      <h1></h1>
-=> Historique => Google IO
 
-=> Principe : write once, run everywhere, mais vraiment everywhere => compilation vers chaque plateforme spécifique : HTML5, JVM (desktop), Android, Flash, iOS (?)
 
-Angry birds sur Chrome
+    <md:MDSlide intro="true"><mdnotes><pre>
+ * 10h40 - 10h50
+		</pre></mdnotes><pre>
+## Play'N
+Prononcez *playin'*
+    </pre></md:MDSlide>  
 
-=> Décrire le principe, montrer une petite appli avec des images ASI (photos des profs, masqués ?)      
-      <div class="section">
-        <h2></h2>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      
-    </rs:Slide>
+    <md:MDSlide><mdnotes><pre>
+* Bibliothèque, abstraction
+* HTML5: GWT
+* Autres: iPhone
+* Playing, Play N >= 4
+		</pre></mdnotes><pre>
+# En bref
+## Jeux vidéos cross platform
+* Java Desktop
+* Navigateurs HTML5
+* Android
+* Flash
+* Autres ;-) ?
+    </pre></md:MDSlide>  
+
+    <md:MDSlide><mdnotes><pre>
+* 5 Googlers
+* Release pour Google IO, 12 mai 2011
+* Kick-Ass Game Programming with Google Web Toolkit
+* Renommage: ForePlay = préliminaires
+		</pre></mdnotes><pre>
+# Historique
+## Projet très récent
+* Créé par des <span class="em">Googlers</span> (temps perso)
+* Angry Birds : <span class="em">chrome</span>.angrybirds.com
+* Google IO 2011 : youtu.be/<span class="em">F_sbusEUz5w</span>
+* Au départ ForPlay <span class="em">forplay</span>.googlecode.com
+* Devenu Play'N <span class="em">playn</span>.googlecode.com
+    </pre></md:MDSlide>  
+
+    <md:MDSlide><mdnotes><pre>
+	</pre></mdnotes><pre>
+# Code 1 / 3
+## Moteur de jeu
+    </pre>
+    	<sh:Code brush="{java.brush}"><pre>
+			public class MyGame implements Game {
+			    public void init() {
+			        // Initialiser le jeu
+			    }
+			
+			    public void update(float delta) {
+			        // Mettre à jour la logique
+			    }
+			
+			    public void paint(float alpha) {
+			        // Mettre à jour l'affichage
+			    }
+			
+			    public int updateRate() {
+			    	// 25 ms = 40 updates par seconde
+			        return 25;
+			    }
+			}</pre>
+		</sh:Code>  
+    </md:MDSlide>
     
-    <rs:Slide hid="Questions">
+    <md:MDSlide><mdnotes><pre>
+	</pre></mdnotes><pre>
+# Code 2 / 3
+## Implémentation Java Desktop
+    </pre>
+    	<sh:Code brush="{java.brush}"><pre>
+			public class Main {
+			    public static void main(String[] args) throws Exception {
+			        JavaPlatform platform = JavaPlatform.register();
+			        platform.assetManager().setPathPrefix("mygame/");
+			        PlayN.run(new MyGame());
+			      }
+			}</pre>
+		</sh:Code>  
+    </md:MDSlide>
+
+    <md:MDSlide><mdnotes><pre>
+	</pre></mdnotes><pre>
+# Code 3 / 3
+## Implémentation HTML5 / GWT
+    </pre>
+    	<sh:Code brush="{java.brush}"><pre>
+			public class MyGameHtml extends HtmlGame {
+			  @Override
+			  public void start() {
+			    HtmlPlatform platform = HtmlPlatform.register();
+			    platform.assetManager().setPathPrefix("mygame/");
+			    PlayN.run(new MyGame());
+			  }
+			}</pre>
+		</sh:Code>  
+    </md:MDSlide>
+
+    <md:MDSlide><mdnotes><pre>
+* Play'N sur Google + ?
+      </pre></mdnotes><pre>
+# Angry Birds
+* Dispo sur <span class="em">Google +</span>
+      <div><div class="{style.angrybirds}"/></div>
+      </pre>
+    </md:MDSlide>
+    
+    <md:MDSlide><mdnotes><pre>
+* Qui connaît ?
+      </pre></mdnotes><pre>
+# 2H4U
+* <span class="em">forplay-2h4u</span>.appspot.com
+<div><div class="{style.toohardforyou}"/></div>
+      </pre>
+    </md:MDSlide>
+    
+    <rs:Slide hid="Questions" intro="true">
     
       <notes>
         <ul>
@@ -85,12 +175,10 @@ Angry birds sur Chrome
         </ul>
       </notes>
       
-      <div class="section intro">
         <h2>Questions ?</h2>
         <p class="{style.wrong}">Combien tu gagnes ?</p>
         <p class="{style.wrong}">I can haz cheezburger?</p>
         <p class="{style.good}">Bon pour le CV ?</p>
-      </div>
       
     </rs:Slide>
     
