@@ -25,8 +25,8 @@
 		<div ui:field="notes">
 			<ul>
 				<li>Introduction: 9h05-9h10</li>
-				<li>GWT: 9h10-9h40 Questions: 9h40-9h45</li>
-				<li>Android: 09h45-10h15 Questions: 10h15-10h20</li>
+				<li>GWT: 9h10-9h45 Questions: 9h45-9h50</li>
+				<li>Android: 09h50-10h15 Questions: 10h15-10h20</li>
              	<li>Pause: 10h20-10h40</li>
 				<li>Play'n: 10h40-10h50 Questions: 10h50-10h55 </li>
 				<li>Conclusion: 10h55-11h00</li>

@@ -57,16 +57,18 @@
    <md:MDSlide>
       <mdnotes><pre>
 * Présentation faite avec Rockslide
+* 1) sources, 2) slides
     </pre></mdnotes><pre>
 # Rockslide
 ## Slides web en GWT
-* <span class="em">pyricau</span>.github.com/<span class="em">rockslide</span>
-<div><div class="{style.rockslide}"/></div>
+* github.com/<span class="em">pyricau</span>/<span class="em">slides-gwt-android-intro</span>
+* <span class="em">pyricau</span>.github.com/<span class="em">slides-gwt-android-intro</span>
+* Framework : <span class="em">pyricau</span>.github.com/<span class="em">rockslide</span>
     </pre></md:MDSlide>
   
     <md:MDSlide intro="true">
       <mdnotes><pre>
- * Questions si temps suffisant
+ * Questions si temps suffisant (avant 11h)
     </pre></mdnotes><pre>
 ## Merci
     </pre></md:MDSlide>
@@ -75,6 +77,7 @@
       <mdnotes><pre>
     </pre></mdnotes><pre>
 ## And now, Excilys
+(Fabrice, c'est à toi)
     </pre></md:MDSlide>
     
   </rs:Slides>

@@ -59,6 +59,7 @@ Prononcez *playin'*
     </pre></md:MDSlide>  
 
     <md:MDSlide><mdnotes><pre>
+ * 10h40 - 10h50
 * Bibliothèque, abstraction
 * HTML5: GWT
 * Autres: iPhone
@@ -74,8 +75,9 @@ Prononcez *playin'*
     </pre></md:MDSlide>  
 
     <md:MDSlide><mdnotes><pre>
+ * 10h40 - 10h50
 * 5 Googlers
-* Release pour Google IO, 12 mai 2011
+* Release pour Google IO, 12 mai 2011 (expliquer IO)
 * Kick-Ass Game Programming with Google Web Toolkit
 * Renommage: ForePlay = préliminaires
 		</pre></mdnotes><pre>
@@ -89,6 +91,7 @@ Prononcez *playin'*
     </pre></md:MDSlide>  
 
     <md:MDSlide><mdnotes><pre>
+ * 10h40 - 10h50
 	</pre></mdnotes><pre>
 # Code 1 / 3
 ## Moteur de jeu
@@ -116,6 +119,7 @@ Prononcez *playin'*
     </md:MDSlide>
     
     <md:MDSlide><mdnotes><pre>
+ * 10h40 - 10h50
 	</pre></mdnotes><pre>
 # Code 2 / 3
 ## Implémentation Java Desktop
@@ -132,6 +136,7 @@ Prononcez *playin'*
     </md:MDSlide>
 
     <md:MDSlide><mdnotes><pre>
+ * 10h40 - 10h50
 	</pre></mdnotes><pre>
 # Code 3 / 3
 ## Implémentation HTML5 / GWT
@@ -149,6 +154,7 @@ Prononcez *playin'*
     </md:MDSlide>
 
     <md:MDSlide><mdnotes><pre>
+ * 10h40 - 10h50
 * Play'N sur Google + ?
       </pre></mdnotes><pre>
 # Angry Birds
@@ -176,9 +182,8 @@ Prononcez *playin'*
       </notes>
       
         <h2>Questions ?</h2>
-        <p class="{style.wrong}">Combien tu gagnes ?</p>
-        <p class="{style.wrong}">I can haz cheezburger?</p>
-        <p class="{style.good}">Bon pour le CV ?</p>
+        <p class="{style.wrong}">Prélimiquoi ?</p>
+        <p class="{style.wrong}">Gou gueule aïe hoh ???</p>
       
     </rs:Slide>
     

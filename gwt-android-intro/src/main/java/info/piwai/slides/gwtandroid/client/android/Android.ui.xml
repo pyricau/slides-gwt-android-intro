@@ -24,6 +24,11 @@
     xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'        
 >
 
+  <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
+  <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
+  
+  <ui:image field="screenshot" src="screenshot.png" />  
+
   <ui:style>
 	.wrong {
 		text-decoration: line-through;
@@ -34,17 +39,23 @@
 		font-size: 20px;
 		line-height: 20px;
 	}
+	@sprite .screenshot {
+	      gwt-image: 'screenshot';
+	}
   </ui:style>
 
   <rs:Slides>
-    <rs:Slide intro="true">
-      <notes>10h05 => 10h35 : Android (30 min)</notes>
-        <h2>Android</h2>
-        <p></p>
-    </rs:Slide>
+  
+     <md:MDSlide intro="true"><mdnotes><pre>
+* 10h50 => 10h15 : Android (25 min)
+     </pre></mdnotes><pre>
+## Android
+Surtout pas <strike>Androïd</strike>
+    </pre></md:MDSlide>
     
     <md:MDSlide><mdnotes><pre>
- * + activations qu'Iphone
+ * 10h50 - 10h55
+ * plus d'activations qu'Iphone
  * Open Source, explication
  * Apps en C
  logo android ?
@@ -55,12 +66,41 @@
  * 500 000 activations **par jour**
  * `Java Apps`
     </pre></md:MDSlide>     
-    
+
+    <md:MDSlide><mdnotes><pre>
+ * 10h50 - 10h55
+ * Boutons back, home, menu, search
+ * barre d'état
+ * notifications
+ * Action bar
+      </pre></mdnotes><pre>
+# Interface Utilisateur
+## Reconnaître un Android
+      </pre><div><div class="{style.screenshot}"/></div>
+    </md:MDSlide>
+
      <md:MDSlide intro="true"><pre>
-## Au coeur d'Android
+## En détail
+Au coeur d'Android
     </pre></md:MDSlide>
     
     <md:MDSlide><mdnotes><pre>
+* 10h55 - 11h15
+* fork process zygote (cellule oeuf)
+* User => sécurité
+* Permissions à l'install (GPS, Internet, SD)
+    </pre></mdnotes><pre>
+# Pinguin inside
+## 1 Application
+ * `=` 1 user linux
+ * `=` 1 répertoire
+ * `=` 1 process
+ * `=` 1 VM
+ * `=` X permissions
+    </pre></md:MDSlide>   
+
+    <md:MDSlide><mdnotes><pre>
+ * 10h55 - 11h15
  * .class: bytecode
  * DEX: Dalvik Executable
  * APK: Android Package
@@ -71,90 +111,126 @@
  * **.java** `=>` **.class**
  * **.class** `=>` **.dex**
  * **.dex** `=>` **.apk**
+ * DEX interprété par Dalvik VM, + optims natives JIT
     </pre></md:MDSlide>
-    
-    
-    <md:MDSlide><mdnotes><pre>
-    </pre></mdnotes><pre>
-# Linux inside
-## Un bon vieux pinguin !
- * 1 App `=` 1 user ID
- * `=` 1 process = 1 VM
- * `=` 
-    </pre></md:MDSlide>   
-    
-    <md:MDSlide><mdnotes><pre>
-    </pre></mdnotes><pre>
-# t
-## t
-    </pre></md:MDSlide>         
-    
-    <rs:Slide hid="">
-      <h1>Historique</h1>
-      <div class="section">
-          <h2></h2>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-      </div>
-    </rs:Slide>
-    
-    <rs:Slide hid="">
-      <h1></h1>
-      Création d'application est simple : allez lire les tutos sur le site officiel
-      <div class="section">
-          <h2></h2>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-      </div>
-    </rs:Slide>
-    
-    <rs:Slide hid="">
-      <h1></h1>
-      Fondations permettant à ce système de fonctionner en mariant ouverture et sécurité
-      
-  - Os Linux
-  - 1 app = 1 process (ex windows) = 1 user (=> sécurité) = 1 chemin accessible
-  - fork zygote (expliquer fork), expliquer VM (et problème démarrage)
-  - Principe des permissions (à l'install) => accès internet, accès GPS, etc.
-  - La VM : langage Java, compilé en bytecode, compilé en Dex, interprété par Dalvik VM, optimisé en code natif avec JIT.
-  Manifest, ressources.
-  Décrire l'archi, le fonctionnement d'une application.
-  
-  1 slide Android, vue + code java
-  
-  AndroidAnnotations => 1 slide ?
 
-  
-  
-  
-      <div class="section">
-          <h2></h2>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-      </div>
-    </rs:Slide>
-    
-    <rs:Slide hid="Questions">
+    <md:MDSlide><mdnotes><pre>
+* 10h55 - 11h15
+* Activités = écrans
+* Communication : messages asynchrones: Intents
+    </pre></mdnotes><pre>
+# Composants d'une application
+## Listés dans le AndroidManifest.xml
+* Activities
+* Services
+* Content Providers
+* Broadcast Receivers
+* `+` permissions et conf
+    </pre></md:MDSlide>
+
+    <md:MDSlide hid="Activity"><mdnotes><pre>
+ * 10h55 - 11h15
+	</pre></mdnotes><pre>
+# Exemple de code
+## Activity [=>](#Android_AndroidAnnotations)
+    	</pre><sh:Code brush="{java.brush}"><pre>
+			public class MyActivity extends Activity {
+			    EditText myInput;
+			    TextView textView;
+			    
+			    @Override
+			    public void onCreate(Bundle savedInstanceState) {
+			        super.onCreate(savedInstanceState);
+			        setContentView(R.layout.main);
+			
+			        final EditText myInput = (EditText) findViewById(R.id.myInput);
+			        final TextView textView = (TextView) findViewById(R.id.myTextView);
+			        
+			        Button myButton = (Button) findViewById(R.id.myButton);
+			        
+			        myButton.setOnClickListener(new OnClickListener() {
+				        public void onClick(View v) {
+							String name = myInput.getText().toString();
+							textView.setText("Hello "+name);
+				        }
+				    });
+			    }
+			}</pre>
+		</sh:Code>
+    </md:MDSlide>
+
+    <md:MDSlide ><mdnotes><pre>
+ * 10h55 - 11h15
+	</pre></mdnotes><pre>
+# Exemple de code
+## R.layout.main
+    	</pre><sh:Code brush="{xml.brush}"><pre>
+			&lt;?xml version="1.0" encoding="utf-8"?&gt;
+			&lt;LinearLayout
+				xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:orientation="vertical"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent" &gt;
+			        &lt;EditText  
+			 		 	android:id="@+id/myInput"
+			            android:layout_width="fill_parent" 
+			            android:layout_height="wrap_content" /&gt;
+			        &lt;Button  
+						android:id="@+id/myButton"
+			            android:layout_width="fill_parent" 
+			            android:layout_height="wrap_content" 
+			            android:text="Click me!" /&gt;        
+			        &lt;TextView  
+						android:id="@+id/myTextView"
+			            android:layout_width="fill_parent" 
+			            android:layout_height="wrap_content" /&gt;
+			&lt;/LinearLayout&gt;</pre>
+		</sh:Code>
+    </md:MDSlide>
+
+     <md:MDSlide intro="true"><pre>
+## What else?
+<span class="em">developer</span>.android.com
+    </pre></md:MDSlide>
+
+    <md:MDSlide hid="AndroidAnnotations"><mdnotes><pre>
+ * 10h55 - 11h15
+	</pre></mdnotes><pre>
+# AndroidAnnotations
+## Du code Android [simple](#Android_Activity)
+* <span class="em">androidannotations</span>.googlecode.com
+    	</pre><sh:Code brush="{java.brush}"><pre>
+			@EActivity(R.layout.main)
+			public class MyActivity extends Activity {
+			
+			    @ViewById
+			    EditText myInput;
+			        
+			    @ViewById(R.id.myTextView)
+			    TextView textView;
+			        
+			    @Click
+			    void myButton() {
+			         String name = myInput.getText().toString();
+			         textView.setText("Hello "+name);
+			    }
+			}</pre>
+		</sh:Code>
+    </md:MDSlide>
+
+    <rs:Slide hid="Questions" intro="true">
     
       <notes>
         <ul>
-          <li>10h35 - 10h40</li>
+          <li>10h15 - 10h20</li>
           <li>Répéter les questions</li>
         </ul>
       </notes>
       
-      <div class="section intro">
         <h2>Questions ?</h2>
         <p class="{style.wrong}">Combien tu gagnes ?</p>
         <p class="{style.wrong}">I can haz cheezburger?</p>
-        <p class="{style.good}">Bon pour le CV ?</p>
-      </div>
+        <p class="{style.good}">Android &amp; Maven = copains ?</p>
       
     </rs:Slide>
     
@@ -162,8 +238,8 @@
     
       <notes>
         <ul>
-          <li>10h20 - 10h40</li>
-          <li>Retour élèves 10h15 - 10h20</li>
+          <li>15 minutes : 10h20 - 10h40</li>
+          <li>Retour élèves 10h35 - 10h40</li>
         </ul>
       </notes>
       

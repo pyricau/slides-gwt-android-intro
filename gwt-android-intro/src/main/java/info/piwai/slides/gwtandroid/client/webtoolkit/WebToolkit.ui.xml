@@ -66,7 +66,7 @@
   
     <md:MDSlide intro="true">
    		<mdnotes><pre>
- * 9h10 - 9h40
+ * 9h10 - 9h45
  * Qui a déjà entendu parler de GWT ?
  * Questions à la fin
  * prononcé Gwit
@@ -76,6 +76,7 @@
     </pre></md:MDSlide>  
 
     <md:MDSlide intro="true"><mdnotes><pre>
+* 9h10 - 9h25
 * ASI 3 4 5 => tous niveaux
 * => les bases
 * Posez questions si pas compris, sinon fin
@@ -93,6 +94,7 @@ Pour les noobs
     </pre></md:MDSlide>
 
     <md:MDSlide><mdnotes><pre>
+* 9h10 - 9h25
 * Qui connaît ?
 * statique, pas dynamique
 * Head / Body / DOM = structure
@@ -119,6 +121,7 @@ Pour les noobs
     </md:MDSlide>  
 
     <md:MDSlide><mdnotes><pre>
+* 9h10 - 9h25
 * Qui connaît ?
 * Dynamique
 * Navigateur 
@@ -126,7 +129,7 @@ Pour les noobs
 * jQuery
 	</pre></mdnotes><pre>
 # Javascript
-## Ça bouge !
+## Comportement
     </pre>
     	<sh:Code brush="{jscript.brush}"><pre>
 			$(document).ready(function() {
@@ -143,13 +146,14 @@ Pour les noobs
     </md:MDSlide>
 
    <md:MDSlide><mdnotes><pre>
+* 9h10 - 9h25
 * Qui connaît ?
 * Créé en 2009, explosion 2011
 * Nombre de connexions
 	</pre></mdnotes><pre>
 # node.js
 ## JS côté serveur
-<span class="em">nodejs</span>.org
+* <span class="em">nodejs</span>.org
     </pre>
     <div><code>&lt;hors sujet&gt;</code>
     	<sh:Code brush="{jscript.brush}"><pre>
@@ -165,11 +169,12 @@ console.log('Server running at http://127.0.0.1:1337/');</pre>
 
 
     <md:MDSlide><mdnotes><pre>
+* 9h10 - 9h25
 * Wikipédia vs Banque en ligne
-* + en + d'applications
+* de + en + d'applications
 	</pre></mdnotes><pre>
 # Site Web VS Application Web
-## Fais la diff' !
+## diff -u site webapp > patch
 
   * pages
   * intéraction
@@ -182,6 +187,7 @@ Is that clear so far?
     </pre></md:MDSlide>  
     
    <md:MDSlide><mdnotes><pre>
+* 9h25 - 9h30
 * Maintenance
 * Runtime
 * Fuites mémoire
@@ -208,6 +214,7 @@ Number.MAX_VALUE*1.0000000000000002 === (1/0) // true</pre>
     </md:MDSlide>
     
     <md:MDSlide><mdnotes><pre>
+* 9h25 - 9h30
 * Qui connaît ?
 * syntaxe proche C++ (C caca, C++...)
 * Excilys = Java
@@ -233,6 +240,7 @@ Certains disent "gwit" (gouit)
     </pre></md:MDSlide>
     
     <md:MDSlide><mdnotes><pre>
+* 9h30 - 9h45
 * Qui connaît ?
 * IE 6 => performant
 * Applications complexes
@@ -247,10 +255,11 @@ Certains disent "gwit" (gouit)
     	</pre>
     </md:MDSlide>
     
-    <md:MDSlide><mdnotes><pre>
+    <md:MDSlide hid="EntryPoint"><mdnotes><pre>
+* 9h30 - 9h45
 	</pre></mdnotes><pre>
 # Méga simple !
-## Un exemple
+## Un exemple [=>](#GWT_UiBinder)
     	</pre><sh:Code brush="{java.brush}"><pre>
 			public class Exemple implements EntryPoint {
 			  
@@ -269,6 +278,7 @@ Certains disent "gwit" (gouit)
     </md:MDSlide>
 
     <md:MDSlide><mdnotes><pre>
+* 9h30 - 9h45
 * AST = Abstract syntax tree
 * Optims en boucle
 * 6 permutations par défauts (6 navigateurs)
@@ -303,18 +313,19 @@ function lm(a,b){return b==null?nm(a):b!=null&amp;&amp;b.cM&amp;&amp;!!b.cM[1]?o
     </md:MDSlide>
 
     <md:MDSlide><mdnotes><pre>
+* 9h30 - 9h45
     </pre></mdnotes><pre>
 # DevMode
 ## Et les bugs ?
 <div class="{style.devmode}"/>
     </pre></md:MDSlide>
 
-    <md:MDSlide><mdnotes><pre>
+    <md:MDSlide hid="UiBinder"><mdnotes><pre>
 * Comme HTML    
 * Déclaratif VS Impératif
   </pre></mdnotes><pre>
 # UiBinder
-## Déclaratif (mort au Swing style!)
+## Déclaratif (mort au [Swing](#GWT_EntryPoint) style!)
       </pre><sh:Code brush="{xml.brush}"><pre>
         &lt;ui:UiBinder
             xmlns:ui="urn:ui:com.google.gwt.uibinder"
@@ -340,6 +351,7 @@ function lm(a,b){return b==null?nm(a):b!=null&amp;&amp;b.cM&amp;&amp;!!b.cM[1]?o
     </md:MDSlide>
 
     <md:MDSlide><mdnotes><pre>
+* 9h30 - 9h45
       </pre></mdnotes><pre>
 # Exemple 1
 ## Gestion d'actifs
@@ -347,6 +359,7 @@ function lm(a,b){return b==null?nm(a):b!=null&amp;&amp;b.cM&amp;&amp;!!b.cM[1]?o
     </md:MDSlide>
     
     <md:MDSlide><mdnotes><pre>
+* 9h30 - 9h45
       </pre></mdnotes><pre>
 # Exemple 2
 ## Finance personnelle
@@ -354,6 +367,7 @@ function lm(a,b){return b==null?nm(a):b!=null&amp;&amp;b.cM&amp;&amp;!!b.cM[1]?o
     </md:MDSlide>
     
     <md:MDSlide><mdnotes><pre>
+* 9h30 - 9h45
       </pre></mdnotes><pre>
 # Exemple 3
 ## Un NAS (LaCie Network Space 2)
@@ -364,7 +378,7 @@ function lm(a,b){return b==null?nm(a):b!=null&amp;&amp;b.cM&amp;&amp;!!b.cM[1]?o
     
       <notes>
         <ul>
-          <li>9h40 - 9h45</li>
+          <li>9h45 - 9h50</li>
           <li>Répéter les questions</li>
         </ul>
       </notes>
